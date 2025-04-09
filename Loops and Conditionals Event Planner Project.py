@@ -19,7 +19,7 @@ while True:
 #Using loop to prompt user to input if the input is incorrect
 
 while True:
-    event_location=input("Enter the event location, options are indoor or outdoor(case sensitive)")
+    event_location=input("Enter the event location, options are indoor or outdoor(case sensitive): ")
     if event_location=="indoor" or event_location=="outdoor":
         break
     print("Error: Please enter either indoor or outdoor (case sensitive)")
