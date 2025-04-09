@@ -12,7 +12,7 @@ while True:
     event_type=input(str("Enter the event type, options are casual or formal: ")).strip().lower()
     if event_type== "formal" or event_type=="casual":
         break
-    print("Error: Please enter either formal or casual (case sensitive)")
+    print("Error: Please enter either formal or casual")
 
 
 #Get event location from user
@@ -25,6 +25,13 @@ while True:
     print("Error: Please enter either indoor or outdoor")
 
 
+#Event selection
+
+print("Select the type of event from the list below:")
+
+if event_type=="casual" and event_location=="indoor":
+    print("1. Birthday Party")
+    print("2. Gender Reveal Party")
 
     
     
