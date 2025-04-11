@@ -62,7 +62,7 @@ elif event_type=="formal" and event_location=="outdoor":
 
 while True:
     try:
-        events_choice=int("Enter the number of the event to choose")
+        events_choice=int(input("Enter the number of the event to choose"))
         if (events_choice)>1 and (events_choice)<=(len((events_list))):
             event=events_choice
             break
