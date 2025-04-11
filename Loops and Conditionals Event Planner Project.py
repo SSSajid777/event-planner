@@ -56,19 +56,19 @@ elif event_type=="formal" and event_location=="outdoor":
     print("2. Company Picnic")
     print("3. Charities/Fundraisers")
     print("4. None of the above")
-    events_list=["Outdoor Wedding", "Company Picnic", "Charities/Fundraiser"]
+    events_list=["Outdoor Wedding", "Company Picnic", "Charities/Fundraiser", "None of the above"]
 
 
 
 while True:
     try:
         events_choice=int(input("Enter the number of the event to choose: "))
-        if (events_choice)>1 and (events_choice)<=(len((events_list))):
+        if (events_choice)>=1 and (events_choice)<=(len((events_list))):
             event=events_choice
             break
         else:
-            print("Enter a valid number from 1-",(len(events_list)))
-    except ValueError as e:
+            print("Error: Enter a valid number from 1-",(len(events_list)))
+    except TypeError as e:
         print("Error", e)
 
 
