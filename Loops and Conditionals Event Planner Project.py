@@ -138,6 +138,25 @@ else:
         food_cost=8
         theme="Enjoy sharing a meal with family/friends outside"
         tip="Make it potluck style to share cost"
+    elif event=="Conferences":
+        min_budget=1500
+        food_cost=30
+        theme="Dress code shoeuld be formal"
+        tip="Provide digital materials instead of paper to save cost"
+    elif event=="Workshop":
+        min_budget=1200
+        food_cost=20
+        theme="Have interactive activities to do for hands-on experience"
+        tip="For the best activities, charge a small fee to reduce cost"
+    elif event=="Indoor Wedding":
+        min_budget=10000
+        food_cost=80
+        theme="Elegant Decorations and have a cake for the bride and broom to cut"
+        tip="Host the event on weekends or holidays so that people do not miss the wedding"
+    elif event=="Outdoor Wedding":
+        min_budget=10000
+        
+
 
 
 
