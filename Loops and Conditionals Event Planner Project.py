@@ -2,10 +2,13 @@
 #Date: 04 April, 2025
 #Description: Making Event Planner which incorporates if statements, for and while loops.
 
-
+#import OpenAI
 from openai import OpenAI
 
 OPEN_AI_KEY="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"
+#use your own API Key, the code won't work without it.
+
+OPEN_AI_KEY="Insert ur api key"
 
 client=OpenAI(api_key=OPEN_AI_KEY)
 
@@ -195,14 +198,16 @@ while True:
 #Budget check
 
 if budget<min_budget:
-    print("Warning: The minimum budget for"+ event + "Should be $"+str(min_budget))
+    print("Warning: The minimum budget for "+ event + " should be $"+str(min_budget))
 
 
 #food calculation
 
 total_food=attendees*food_cost
-print("Estimated food cost: $") + str(food_cost)
+print("Estimated food cost: $")+((float(total_food)))
+print("Theme: " + theme)
 print("Money saving tip:"+ tip)
+
 
 
 #import random
