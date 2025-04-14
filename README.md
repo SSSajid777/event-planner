@@ -1,8 +1,8 @@
-1. Ask the user about details of the type of event (formal/informal)(then give a user list of options and if the user says none of the above, prompt ChatGPT to answer it), number of attendees, average age of attendees, budget and what type of aesthetic do they want.
+1. Ask the user about details of the type of event (formal/informal)(then give a user list of options and if the user says none of the above, prompt ChatGPT to answer it), number of attendees.
 
-2. Recommendation based on event type, number of attendees, age of attendees, location, aesthetic of the event, dress code.
+2. Recommendation based on event type, number of attendees, age of attendees, location.
 
-3. Offer advice based on weather conditions (students will simulate random weather choices (sunny, rainy, snowy etc)), most frugal way to arrange the event 
+3. Offer advice based on weather conditions (students will simulate random weather choices (sunny, rainy, snowy etc)), most frugal way to arrange the event .
 
 4. How much it will cost to feed (user inputs number) of attendees. 
 
