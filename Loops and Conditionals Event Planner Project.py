@@ -5,10 +5,13 @@
 
 from openai import OpenAI
 
+OPEN_AI_KEY="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"
+
+client=OpenAI(api_key=OPEN_AI_KEY)
 
 
 
-"""
+
 
 
 print("Welcome to the Event Planner!")
@@ -80,8 +83,101 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
     except:
         print("Error: Please enter a valid number")
 
-"""
-#import openai
+
+#if none of the above is chosen
+
+if event=="None of the above":
+    print("Since you chose none of the above, let's ask ChatGPT to help!")
+    completion= client.chat.completions.create(
+        model="gpt-4o-mini",
+        store=True,
+        messages=[
+        {"role":"system", "content": "You are an event planner app"},
+        {"role":"user","content": "Suggest a event type for" + event_type + " " + event_location + " event idea with budget tips, weather tips, "}
+        ]
+    )
+    print(completion.choices[0].message.content) 
+else:
+    if event=="Birthday Party":
+        min_budget=300
+        food_cost=12
+        theme="Decorate venue with balloons"
+        tip="Buy balloons in bulk from wholesale stores"
+    elif event=="Gender Reveal Party":
+        min_budget=250
+        food_cost=10
+        theme="Reveal gender with balloons instead of powder to save money"
+        tip="Buy ballons in bulk from wholesale stores"
+    elif event=="Halloween":
+        min_budget=400
+        food_cost=15
+        theme="The theme should be spooky, carve pumpkins and wear a costume"
+        tip="Buy costumes when they are in discount"
+    elif event=="Christmas":
+        min_budget=500
+        food_cost=20
+        theme="Decorate Christams tree with lights and buy gifts"
+        tip="Buy gifts when they are in discount"
+    elif event=="Thanksgiving":
+        min_budget=350
+        food_cost=18
+        theme="Cook a turkey and enjoy the meal with family"
+        tip="Buy turkey a day or 2 before Thanksgiving so that it is fresh"
+    elif event=="Outdoor Birthday Party":
+        min_budget=350
+        food_cost=12
+        theme="Have fun activities for children"
+        tip="Tell the birthday child to hit a pinata, after which candies fall"
+    elif event=="Outdoor Barbeque":
+        min_budget=300
+        food_cost=12
+        theme="Enjoy eating Barbeque outside"
+        tip="Buy meat in bulk from wholesale stores"
+    elif event=="Family/Friends Picnic":
+        min_budget=200
+        food_cost=8
+        theme="Enjoy sharing a meal with family/friends outside"
+        tip="Make it potluck style to share cost"
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
 
 
 
@@ -93,40 +189,10 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
 
 
 
+ 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
- #Different budget for each event   
-if event=="Birthday Party":
-    min_budget=350
-    cost_per_person=10
-    theme=print("Decorate the venue with balloons and have a birthday cake")
-    tip=print("Buy balloons in bulk to save money")
-elif event=="Gender Reveal Party":
-    min_budget=250
-    cost_per_person=20
-    theme=print("Reveal the gender with a balloon")
-    tip=print("Compare Balloon prices wtih other store to get the best price")
-elif event=="Halloween":
-    print
-
-
-
-"""
     
     
 
