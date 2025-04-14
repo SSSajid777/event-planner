@@ -2,6 +2,9 @@
 #Date: 04 April, 2025
 #Description: Making Event Planner which incorporates if statements, for and while loops.
 
+
+from openai import OpenAI
+
 print("Welcome to the Event Planner!")
 print("Let's create the best event!") 
 
