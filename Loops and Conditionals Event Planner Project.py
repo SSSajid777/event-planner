@@ -5,7 +5,7 @@
 #import OpenAI
 from openai import OpenAI
 
-OPEN_AI_KEY="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"
+OPEN_AI_KEY="Insert your API"
 #use your own API Key, the code won't work without it.
 
 OPEN_AI_KEY="Insert ur api key"
