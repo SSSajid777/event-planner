@@ -197,7 +197,31 @@ while True:
 if budget<min_budget:
     print("Warning: The minimum budget for"+ event + "Should be $"+str(min_budget))
 
-    
+
+#food calculation
+
+total_food=attendees*food_cost
+print("Estimated food cost: $") + str(food_cost)
+print("Money saving tip:"+ tip)
+
+
+#import random
+import random
+
+#Random Weather advice for outdoor events
+
+
+if event_location=="outdoor":
+    weather=random.choice(["sunny","rainy","cloudy","windy","snowy"])
+    print("Weather Forecast: ",weather)
+
+    if weather=="sunny":
+        print("Provide sunscreen and shaded areas")
+        
+
+
+
+
 
 
 
