@@ -64,16 +64,44 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
     try:
         events_choice=int(input("Enter the number of the event to choose: "))  #user inputs the number of event from the list  
         if (events_choice)>=1 and (events_choice)<=(len((events_list))):
-            event=events_choice
+            event=events_list[events_choice-1]
             break
         else:
             print("Error: Enter a valid number from 1-",(len(events_list)))
-    except TypeError as e:
-        print("Error", e)
+    except:
+        print("Error: Please enter a valid number")
 
 
- #Different budgets and other requirements for each event      
-    
+#import openai
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #Different budget for each event   
 if event=="Birthday Party":
     min_budget=350
     cost_per_person=10
@@ -82,18 +110,16 @@ if event=="Birthday Party":
 elif event=="Gender Reveal Party":
     min_budget=250
     cost_per_person=20
-    theme=print("Reveal the gender with powder color or with a pinata")
-    tip=print("Don't do anything extra when revealing gender")
+    theme=print("Reveal the gender with a balloon")
+    tip=print("Compare Balloon prices wtih other store to get the best price")
+elif event=="Halloween":
+    print
+
+
+
+
     
-
     
-    
-
-
-
-
-
-
 
 
 
