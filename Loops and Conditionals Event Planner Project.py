@@ -5,10 +5,10 @@
 #import OpenAI
 from openai import OpenAI
 
-OPEN_AI_KEY="Insert your API"
+OPEN_AI_KEY="API Key"
 #use your own API Key, the code won't work without it.
 
-OPEN_AI_KEY="Insert ur api key"
+
 
 client=OpenAI(api_key=OPEN_AI_KEY)
 
