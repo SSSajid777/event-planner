@@ -165,7 +165,7 @@ else:
         event=="Charities/Fundraiser"
         min_budget=2500
         food_cost=25
-        theme="Have donation tables so that it is easier for people to donate"
+        theme="Have tap to pay so that it is easier for people to donate"
         tip="Give attendees brochure about the impact of donations to encourage people to donate"
 
 
@@ -204,7 +204,7 @@ if budget<min_budget:
 #food calculation
 
 total_food=attendees*food_cost
-print("Estimated food cost: $")+((float(total_food)))
+print("Estimated food cost for " + str(attendees) + " people: $" + str(total_food)) 
 print("Theme: " + theme)
 print("Money saving tip:"+ tip)
 
@@ -217,128 +217,23 @@ import random
 
 
 if event_location=="outdoor":
-    weather=random.choice(["sunny","rainy","cloudy","windy","snowy"])
-    print("Weather Forecast: ",weather)
+    weather=random.choice(["Sunny","Rainy","Cloudy","Windy","Snowy"])
+    print("Weather Forecast:",weather)
 
-    if weather=="sunny":
-        print("Provide sunscreen and shaded areas")
-    elif weather=="rainy":
-        print("Consider renting a tent")
-    elif weather=="snowy":
-        print("Consider renting a tent and arrange heaters and warm drinks")
-    elif weather=="windy":
-        print("Set all decorations and tables securely")
+    if weather=="Sunny":
+        print("Weather Tip: Provide sunscreen and shaded areas")
+    elif weather=="Rainy":
+        print("Weather Tip: Consider renting a tent")
+    elif weather=="Snowy":
+        print("Weather Tip: Consider renting a tent and arrange heaters and warm drinks")
+    elif weather=="Windy":
+        print("Weather Tip: Set all decorations and tables securely")
     else:
-        print("Tell attendees to bring umbrella in case of rain")
+        print("Weather Tip: Tell attendees to bring umbrella in case of rain")
 
 
 
 print("Thank you for using our Event Planner!")       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-     
-
-
-
-
-
-
-
- 
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
