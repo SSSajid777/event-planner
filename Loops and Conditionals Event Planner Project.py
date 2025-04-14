@@ -155,7 +155,61 @@ else:
         tip="Host the event on weekends or holidays so that people do not miss the wedding"
     elif event=="Outdoor Wedding":
         min_budget=10000
+        food_cost=45
+        theme="Outdoor site should have garden with flowers and lights"
+        tip="Host the event on weekends or holidays so that people do not miss the wedding"
+    else:
+        event=="Charities/Fundraiser"
+        min_budget=2500
+        food_cost=25
+        theme="Have donation tables so that it is easier for people to donate"
+        tip="Give attendees brochure about the impact of donations to encourage people to donate"
+
+
+
         
+#Get attendees
+
+while True:
+    try:
+        attendees=int(input("Enter the number of attendees: "))
+        if attendees>0:
+            break
+    except ValueError as e:
+        print("Error",e)
+
+
+
+#Get budget
+
+while True:
+    try:
+        budget=float(input("Enter your budget: "))
+        if budget>0:
+            break
+    except ValueError as e:
+        print("Error",e)
+
+
+
+#Budget check
+
+if budget<min_budget:
+    print("Warning: The minimum budget for"+ event + "Should be $"+str(min_budget))
+
+    
+
+
+
+
+
+
+
+
+
+
+
+            
 
 
 
