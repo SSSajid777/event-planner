@@ -5,6 +5,12 @@
 
 from openai import OpenAI
 
+
+
+
+"""
+
+
 print("Welcome to the Event Planner!")
 print("Let's create the best event!") 
 
@@ -74,7 +80,7 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
     except:
         print("Error: Please enter a valid number")
 
-
+"""
 #import openai
 
 
@@ -103,7 +109,7 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
 
 
 
-
+"""
  #Different budget for each event   
 if event=="Birthday Party":
     min_budget=350
@@ -120,7 +126,7 @@ elif event=="Halloween":
 
 
 
-
+"""
     
     
 
