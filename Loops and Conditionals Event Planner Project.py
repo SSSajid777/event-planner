@@ -217,7 +217,20 @@ if event_location=="outdoor":
 
     if weather=="sunny":
         print("Provide sunscreen and shaded areas")
-        
+    elif weather=="rainy":
+        print("Consider renting a tent")
+    elif weather=="snowy":
+        print("Consider renting a tent and arrange heaters and warm drinks")
+    elif weather=="windy":
+        print("Set all decorations and tables securely")
+    else:
+        print("Tell attendees to bring umbrella in case of rain")
+
+
+
+print("Thank you for using our Event Planner!")       
+
+
 
 
 
