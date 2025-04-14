@@ -4,8 +4,7 @@
 
 3. Offer advice based on weather conditions (students will simulate random weather choices (sunny, rainy, snowy etc)), most frugal way to arrange the event 
 
-4. Share fun facts about the host of the event safety tips, how much it will cost to feed (user inputs number) of attendees. 
+4. How much it will cost to feed (user inputs number) of attendees. 
 
-5. Loop to ask additional details like when the event will be held and recommend when to start planning the event.
-   
-6. Use ChatGPT API to make an invitation card for the event.
+
+5. Use ChatGPT API to make an invitation card for the event.
