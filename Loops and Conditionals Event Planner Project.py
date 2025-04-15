@@ -5,7 +5,7 @@
 #import OpenAI
 from openai import OpenAI
 
-OPEN_AI_KEY=""
+OPEN_AI_KEY=" "
 #use your own API Key, the code won't work without it.
 
 
@@ -90,8 +90,9 @@ while True:  #looping so that user has to input again if user gives a wrong inpu
 #if none of the above is chosen
 
 if event=="None of the above":
-    print("Since you chose none of the above, let's ask ChatGPT to help!")
-    completion= client.chat.completions.create(
+    while True:
+        print("Since you chose none of the above, let's ask ChatGPT to help!")
+        completion= client.chat.completions.create(
         model="gpt-4o-mini",
         store=True,
         messages=[
@@ -99,7 +100,10 @@ if event=="None of the above":
         {"role":"user","content": "Suggest 5 event types for" + event_type + " " + event_location + " event ideas with budget tips, weather tips, most frugal way to host the event, fun facts, food cost per person. Give budget options for number of attendees (example if 50 attendees and food cost per person is 20, what the budget should be) )"}
         ]
     )
-    print(completion.choices[0].message.content) 
+        print(completion.choices[0].message.content) 
+        print("Thank you for using the Event Planner!")
+        break
+
 else:
     if event=="Birthday Party":
         min_budget=300
@@ -178,8 +182,9 @@ while True:
         attendees=int(input("Enter the number of attendees: "))
         if attendees>0:
             break
-    except ValueError as e:
-        print("Error",e)
+    
+    except:
+        print("Error: Enter a positive integer")
 
 
 
@@ -190,8 +195,8 @@ while True:
         budget=float(input("Enter your budget: "))
         if budget>0:
             break
-    except ValueError as e:
-        print("Error",e)
+    except:
+        print("Error: Enter a positive number")
 
 
 
@@ -199,14 +204,32 @@ while True:
 
 if budget<min_budget:
     print("Warning: The minimum budget for "+ event + " should be $"+str(min_budget))
+    while True:
+        confirm_budget=input("Are you sure you want to proceed with the budget calculation?(yes/no): ")
+        if confirm_budget=="yes":
+            break
+        print("Please enter yes or no")
+        
+        
+            
 
+        
+    if confirm_budget=="no":
+     print("You chose to ignore the budget calculation. Proceeding with the weather advice!")  
+    else:
+     total_food=attendees*food_cost
+     print("Estimated food cost for " + str(attendees) + " people: $" + str(total_food)) 
+     print("Theme: " + theme)
+     print("Money saving tip:"+ tip)
+
+        
+            
+       
+            
 
 #food calculation
 
-total_food=attendees*food_cost
-print("Estimated food cost for " + str(attendees) + " people: $" + str(total_food)) 
-print("Theme: " + theme)
-print("Money saving tip:"+ tip)
+
 
 
 
