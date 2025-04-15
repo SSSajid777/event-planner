@@ -5,7 +5,7 @@
 #import OpenAI
 from openai import OpenAI
 
-OPEN_AI_KEY="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"
+OPEN_AI_KEY=""
 #use your own API Key, the code won't work without it.
 
 
@@ -96,7 +96,7 @@ if event=="None of the above":
         store=True,
         messages=[
         {"role":"system", "content": "You are an event planner app"},
-        {"role":"user","content": "Suggest a event type for" + event_type + " " + event_location + " event idea with budget tips, weather tips, "}
+        {"role":"user","content": "Suggest 5 event types for" + event_type + " " + event_location + " event ideas with budget tips, weather tips, most frugal way to host the event, fun facts, food cost per person. Give budget options for number of attendees (example if 50 attendees and food cost per person is 20, what the budget should be) )"}
         ]
     )
     print(completion.choices[0].message.content) 
