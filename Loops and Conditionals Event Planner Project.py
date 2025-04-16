@@ -101,8 +101,8 @@ if event=="None of the above":
         ]
     )
         print(completion.choices[0].message.content) 
-        print("Thank you for using the Event Planner!")
-        break
+        #print("Thank you for using the Event Planner!")
+        #break
 
 else:
     if event=="Birthday Party":
