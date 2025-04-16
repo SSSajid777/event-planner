@@ -27,7 +27,9 @@ while True:
     event_type=input(str("Enter the event type, options are casual or formal: ")).strip().lower()
     if event_type== "formal" or event_type=="casual":
         break
-    print("Error: Please enter either formal or casual")
+    else:
+        print("Error: Please enter either formal or casual")
+    
 
 
 #Get event location from user
@@ -37,7 +39,9 @@ while True:
     event_location=input(str("Enter the event location, options are indoor or outdoor: ")).strip().lower()
     if event_location=="indoor" or event_location=="outdoor":
         break
-    print("Error: Please enter either indoor or outdoor")
+    else:
+        print("Error: Please enter either indoor or outdoor")
+    
 
 
 #Event selection
@@ -228,9 +232,11 @@ while True:
        
             
 
-#food calculation
+#total food cost calculation
 
-
+food_cost_total=attendees*food_cost
+food_cost_round=round(food_cost_total,2)
+print("Your total food cost will be: $" + str(food_cost_round))
 
 
 
