@@ -57,9 +57,9 @@ elif event_type=="casual" and event_location=="outdoor": #events for casual and 
     print("1. Outdoor Birthday Party")
     print("2. Outdoor Gender Reveal Party")
     print("3. Outdoor Barbeque")
-    print("4. Family/Friends Picnic")
+    print("4. Family Picnic")
     print("5. None of the above")
-    events_list=["Outdoor Birthday Party", "Outdoor Gender Reveal Party", "Outdoor Barbeque", "Family/Friends Picnic", "None of the above"] #keeping the options in a list
+    events_list=["Outdoor Birthday Party", "Outdoor Gender Reveal Party", "Outdoor Barbeque", "Family Picnic", "None of the above"] #keeping the options in a list
 elif event_type=="formal" and event_location=="indoor": #events for formal and indoor
     print("1. Conferences")
     print("2. Workshop")
@@ -71,7 +71,7 @@ elif event_type=="formal" and event_location=="outdoor": #events for formal and 
     print("2. Company Picnic")
     print("3. Charities/Fundraisers")
     print("4. None of the above")
-    events_list=["Outdoor Wedding", "Company Picnic", "Charities/Fundraiser", "None of the above"]  #keeping the options in a list
+    events_list=["Outdoor Wedding", "Company Picnic", "Fundraiser", "None of the above"]  #keeping the options in a list
 
 
 
@@ -140,7 +140,7 @@ else:
         food_cost=12
         theme="Enjoy eating Barbeque outside"
         tip="Buy meat in bulk from wholesale stores"
-    elif event=="Family/Friends Picnic":
+    elif event=="Family Picnic":
         min_budget=200
         food_cost=8
         theme="Enjoy sharing a meal with family/friends outside"
@@ -166,7 +166,7 @@ else:
         theme="Outdoor site should have garden with flowers and lights"
         tip="Host the event on weekends or holidays so that people do not miss the wedding"
     else:
-        event=="Charities/Fundraiser"
+        event=="Fundraiser"
         min_budget=2500
         food_cost=25
         theme="Have tap to pay so that it is easier for people to donate"
