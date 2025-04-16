@@ -192,36 +192,37 @@ while True:
 
 while True:
     try:
-        budget=float(input("Enter your budget: "))
+        budget=float(input("Enter your budget: $"))
         if budget>0:
-            break
-    except:
-        print("Error: Enter a positive number")
+            if budget<min_budget:
+                print("Warning:Your budget is less than the minimum budget.")
+                while True:
+                    confirm_budget=input("Are you sure you want to proceed with this budget?(yes/no): ").strip().lower()
+                
+                    if confirm_budget=="no":
+                        print("Please enter a new budget")
+                        break
+                    elif confirm_budget=="yes":
+                        break
+                    else:
+                        print("Enter either yes or no")
+                if confirm_budget=="yes":
+                    break
+            else:
+                    break
+    except TypeError as e:
+        print("Error, e")
+                    
 
 
 
-#Budget check
 
-if budget<min_budget:
-    print("Warning: The minimum budget for "+ event + " should be $"+str(min_budget))
-    while True:
-        confirm_budget=input("Are you sure you want to proceed with the budget calculation?(yes/no): ")
-        if confirm_budget=="yes":
-            break
-        print("Please enter yes or no")
-        
-        
             
-
+            
         
-    if confirm_budget=="no":
-     print("You chose to ignore the budget calculation. Proceeding with the weather advice!")  
-    else:
-     total_food=attendees*food_cost
-     print("Estimated food cost for " + str(attendees) + " people: $" + str(total_food)) 
-     print("Theme: " + theme)
-     print("Money saving tip:"+ tip)
-
+    
+    
+        
         
             
        
